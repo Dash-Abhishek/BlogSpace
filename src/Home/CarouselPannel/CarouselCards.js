@@ -1,7 +1,7 @@
 import styles from 'styled-components'
 
 
-const FeaturedTile = styles.div`
+const Card = styles.div`
 display:flex;
 flex-direction:column;
 height:200px;    
@@ -13,4 +13,4 @@ color: black;
 box-shadow: 0 10px 6px -6px #777;
 `
 
-export default FeaturedTile;
+export default Card;

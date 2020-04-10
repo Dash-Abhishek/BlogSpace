@@ -39,6 +39,15 @@ const Header = () => {
 
     `
 
+    const SubscribeButton = styled.button`
+    bsckground: gold;
+    border: none;
+    background: coral;
+    color: white;
+    border-radius: 5px;
+    font-size: large
+    `
+
 
     return (
 
@@ -49,13 +58,10 @@ const Header = () => {
                 <Item>Moto</Item>
                 <Item>Tech</Item>
                 <Item>Livestyle</Item>
-                <Item>Travel</Item>
                 <Item>Social</Item>
                 <Item>Legal</Item>
             </NavItems>
-
-            
-                {/* BLogSpace */}
+            <SubscribeButton>Subscribe</SubscribeButton>
 
         </NavBar>
 

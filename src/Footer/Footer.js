@@ -1,53 +1,50 @@
 
 import React from 'react'
-import styled from 'styled-components';
+import styles from 'styled-components';
 
 
 const Footer = () => {
 
 
-    const NavBar = styled.div`
+    const FooterBar = styles.div`
     display:flex;
-    justify-content:space-evenly;
-    width:100%;
+    flex:1;
     background: black;
-
-    
+    border-radius:5px;
     `
 
-    const ContactPannel = styled.div`
-    diplay:flex;
-    flex-direction:column;
-    // background: darkorange;
-    color: white;
-    width:40%;
-    margin-top:20px;
+    const Section1 = styles.div`
+    display:flex;
+    flex:1;
+    margin: 10px;
+    // background: aliceblue;
+    color:white;
     `
+    const Section2 = styles.div`
+    display:flex;
+    flex:2;
+    margin: 10px;
+    // background: aliceblue;
+    color:white;
+    ` 
 
-
-    const SubcribeButton = styled.button`
-    border: none;
-    border-radius: 5px;
-    background: darkorange;
-    height:30%;
-    width:10%;
-    color: white;
+    const Devider = styles.div`
+    background: gold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 3px;
 
     `
 
 
     return (
 
-        <NavBar>
-            <ContactPannel>
-                <h4>Terms of use</h4>
-                <p>Under development</p>
-                <p>© 2020 Copyright opensource </p>
-            </ContactPannel>
-            <SubcribeButton>Subcribe</SubcribeButton>
-
-        </NavBar>
-
+       
+        <FooterBar>
+            <Section1>Footer section1</Section1>
+            <Devider/>
+            <Section2>Footer section2</Section2>
+        </FooterBar>
 
     )
 
