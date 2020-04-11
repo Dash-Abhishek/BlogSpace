@@ -3,9 +3,8 @@ import styles from 'styled-components'
 
 const Card = styles.div`
 display:flex;
-flex-direction:column;
-height:200px;    
-width: 350px;
+flex-direction:column; 
+width: 30%;
 background :white;
 border-radius: 5px;
 padding 15px;

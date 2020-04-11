@@ -13,7 +13,6 @@ flex:2;
 flex-wrap: wrap;
 flex-direction: column;
 // background: aliceblue;
-max-width:1200px;
 `
 
 
@@ -24,13 +23,12 @@ flex-wrap: wrap;
 max-height: 280px;
 align-items: center;
 justify-content: space-between;
-flex-basis: 30%;
 
 `
 
 const TopBlogTile = styled.div`
 display:flex;
-flex:2;
+flex:1;
 background: #343a40;
 padding: 30px;
 margin: 5px;
@@ -39,7 +37,7 @@ border-radius: 5px;
 box-shadow: 0 10px 6px -6px #777;
 flex-direction: column;
 height: 250px;
-min-width:800px;
+min-width:60%;
 `
 
 const StatsPannel = styled.div`
@@ -52,7 +50,7 @@ border-radius: 5px;
 box-shadow: 0 10px 6px -6px #777;
 flex-direction: column;
 height:250px;
-min-width:300px;
+min-width:20%;
 `
 
 
@@ -69,6 +67,7 @@ const Home = () => {
                 informing new readers quickly and efficiently about
                 what's most interesting in this post's contents.
                     </h3>
+                    
             </JumbotronPannel>
             
             <CarouselPannel/>

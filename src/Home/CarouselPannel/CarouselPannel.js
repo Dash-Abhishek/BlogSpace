@@ -6,9 +6,9 @@ import Card from './CarouselCards';
 const Pannel = styles.div`
 
 display: flex;
-height: 300px;
+flex-wrap: wrap;
 align-items: center;
-justify-content: space-between;
+justify-content: space-around;
 `
 
 

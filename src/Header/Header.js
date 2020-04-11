@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
+import Bridge from '../CommBridge/Bridge';
+import SubscribeButton from '../Common/Subcription';
 
 
 const Header = () => {
@@ -7,8 +9,8 @@ const Header = () => {
 
     const NavBar = styled.div`
     display:flex;
-    align-content:center;
-    justify-content:center;
+    // align-content:center;
+    width:100%;
     color: black;
     font-weight: 200;
     font-size: x-large;
@@ -39,15 +41,6 @@ const Header = () => {
 
     `
 
-    const SubscribeButton = styled.button`
-    bsckground: gold;
-    border: none;
-    background: coral;
-    color: white;
-    border-radius: 5px;
-    font-size: large
-    `
-
 
     return (
 
@@ -61,8 +54,8 @@ const Header = () => {
                 <Item>Social</Item>
                 <Item>Legal</Item>
             </NavItems>
-            <SubscribeButton>Subscribe</SubscribeButton>
-
+            <SubscribeButton></SubscribeButton>
+            
         </NavBar>
 
 
