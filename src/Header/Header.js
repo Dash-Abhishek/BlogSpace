@@ -18,8 +18,7 @@ const Header = () => {
     // background: aliceblue;
     justify-content: space-between;
     flex-basis: 30%;
-    margin-top: 25px;
-    
+    padding:20px;
     `
 
     const NavItems = styled.div`
@@ -37,7 +36,7 @@ const Header = () => {
     const Logo = styled.div`
     diplay:flex;
     font-weight:800;
-    // font-size: xx-large
+    font-size: x-large
 
     `
 
@@ -50,9 +49,11 @@ const Header = () => {
             <NavItems>
                 <Item>Moto</Item>
                 <Item>Tech</Item>
+                <Item>Travel</Item>
                 <Item>Livestyle</Item>
                 <Item>Social</Item>
                 <Item>Legal</Item>
+
             </NavItems>
             <SubscribeButton></SubscribeButton>
             

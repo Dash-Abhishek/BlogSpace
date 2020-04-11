@@ -13,6 +13,7 @@ flex:2;
 flex-wrap: wrap;
 flex-direction: column;
 // background: aliceblue;
+width:80%;
 `
 
 

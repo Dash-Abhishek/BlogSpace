@@ -9,6 +9,7 @@ const Footer = () => {
     const FooterBar = styles.div`
     display:flex;
     flex:1;
+    width:100%;
     background: black;
     border-radius:5px;
     `

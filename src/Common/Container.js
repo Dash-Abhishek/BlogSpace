@@ -8,6 +8,7 @@ display: flex;
 flex-direction:column;
 min-height: 200vh;
 flex-wrap: wrap;
+align-items: center;
 `
 
 export default Container;
