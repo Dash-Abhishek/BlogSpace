@@ -12,6 +12,7 @@ const Footer = () => {
     width:100%;
     background: black;
     border-radius:5px;
+    min-height:30vh;
     `
 
     const Section1 = styles.div`

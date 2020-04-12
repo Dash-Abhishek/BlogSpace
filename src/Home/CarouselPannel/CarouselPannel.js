@@ -8,7 +8,8 @@ const Pannel = styles.div`
 display: flex;
 flex-wrap: wrap;
 align-items: center;
-justify-content: space-around;
+justify-content: space-between;
+// background:green;
 `
 
 
@@ -19,19 +20,36 @@ const CarouselPannel = () => {
         <Pannel>
             <Card>
                 <h4>Blog 1</h4>
-                <br />
+                
                 <h5>subtitle</h5>
             </Card>
             <Card>
                 <h4>Blog 2</h4>
-                <br />
+                
                 <h5>subtitle</h5>
             </Card>
             <Card>
                 <h4>Blog 3</h4>
-                <br />
+                
                 <h5>subtitle</h5>
             </Card>
+            <Card>
+                <h4>Blog 3</h4>
+                
+                <h5>subtitle</h5>
+            </Card>
+            <Card>
+                <h4>Blog 3</h4>
+                
+                <h5>subtitle</h5>
+            </Card>
+            <Card>
+                <h4>Blog 3</h4>
+                
+                <h5>subtitle</h5>
+            </Card>
+            
+            
 
         </Pannel>
     )

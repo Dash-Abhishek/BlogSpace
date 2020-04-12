@@ -15,10 +15,8 @@ const Header = () => {
     font-weight: 200;
     font-size: x-large;
     font-family: sans-serif;
-    // background: aliceblue;
+    // background: yellow;
     justify-content: space-between;
-    flex-basis: 30%;
-    padding:20px;
     `
 
     const NavItems = styled.div`
