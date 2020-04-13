@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import React  from 'react';
-import ToptTendTile from '../TrendPannel/TopTrendTile';
+import ToptTendTile from './TopTrendTile';
 import TrendStatsPannel from './TrendStatsPannel';
 
 

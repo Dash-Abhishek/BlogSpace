@@ -1,13 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components';
 import Bridge from '../CommBridge/Bridge';
 import SubscribeButton from '../Common/Subcription';
 
 
-const Header = () => {
-
-
-    const NavBar = styled.div`
+const NavBar = styled.div`
     display:flex;
     // align-content:center;
     width:100%;
@@ -17,50 +14,49 @@ const Header = () => {
     font-family: sans-serif;
     // background: yellow;
     justify-content: space-between;
-    `
+`;
 
-    const NavItems = styled.div`
+const NavItems = styled.div`
     display:flex;
     justify-content: space-between;
     flex-basis: 50%;
-    `
+`;
 
-    const Item = styled.div`
+const Item = styled.div`
     display:flex;
     text-decoration:none;
     font-size: x-large;
-    `
+`;
 
-    const Logo = styled.div`
+const Logo = styled.div`
     diplay:flex;
     font-weight:800;
     font-size: x-large
+`;
 
-    `
-
+const Header = ({
+    getCategories,
+    categories
+}) => {
+    useEffect(() => {
+        if(!categories || (categories.length === 0)) {
+            getCategories();
+        }
+    }, []);
 
     return (
-
         <NavBar>
-
             <Logo>BlogSpace</Logo>
             <NavItems>
-                <Item>Moto</Item>
-                <Item>Tech</Item>
-                <Item>Travel</Item>
-                <Item>Livestyle</Item>
-                <Item>Social</Item>
-                <Item>Legal</Item>
-
+                {
+                    categories
+                    ? categories.map(c => <Item key={ c } >{ c }</Item>)
+                    : null
+                }
             </NavItems>
-            <SubscribeButton></SubscribeButton>
-            
+            <SubscribeButton />            
         </NavBar>
-
-
-    )
-
+    );
 }
-
 
 export default Header;
