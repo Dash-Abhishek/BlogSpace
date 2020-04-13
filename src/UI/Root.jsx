@@ -17,6 +17,7 @@ const Body = styled.section`
     margin-right: auto;
     width: fit-content;
     min-height: calc(100vh - 210px);
+    background: linear-gradient(to top, #dfe9f3 50%, white 100%);  
 `;
 
 const Root = ({ store }) => {

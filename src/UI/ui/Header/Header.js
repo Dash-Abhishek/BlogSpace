@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react'
 import styled from 'styled-components';
 import Bridge from '../CommBridge/Bridge';
-import SubscribeButton from '../Common/Subcription';
+import SubscribeButton from '../Common/SubcribeButton';
 
 
 const NavBar = styled.div`
     display:flex;
-    // align-content:center;
+    position: fixed;
     width:100%;
     color: black;
     font-weight: 200;
