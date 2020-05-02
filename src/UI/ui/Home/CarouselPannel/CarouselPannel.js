@@ -10,6 +10,7 @@ flex-wrap: wrap;
 align-items: center;
 justify-content: space-between;
 // background:green;
+margin:20px 0px 10px 0px;
 `
 
 

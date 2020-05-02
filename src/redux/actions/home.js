@@ -29,7 +29,8 @@ export const getTrendingBlogs = () => {
 
             })
             .catch((error) => {
-                alert("temporarily out of service")
+                alert("Service unavailable, loading dummy data")
+                dispatch({type: GET_TRENDING_BLOGS_SUCCESS, payload: [{id:1,title:"dummy data", subTitle:"dummy data"},{id:1,title:"dummy data", subTitle:"dummy data"}]})
             })
 
     }
