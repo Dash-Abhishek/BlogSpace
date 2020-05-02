@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 // import { Router, Route } from 'react-router-dom';
 import styles from 'styled-components';
-// import styled from 'styled-components';
 import JumbotronPannel from './JumbotronPannel/JumbotronPannel'
 import CarouselPannel from './CarouselPannel/CarouselPannel'
 import TrendPannel from './TrendPannel/TrendPannel';
@@ -25,7 +24,7 @@ const Home = ({
 
     useEffect(() => {
         if(!trendingBlogs || (trendingBlogs.length === 0)) {
-            getTrendingBlogs();
+            getTrendingBlogs(); 
         }
     }, []);
 

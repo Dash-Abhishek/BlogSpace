@@ -1,7 +1,7 @@
  const axios = require('axios');
 
 
- axios.defaults.baseURL= "http://localhost:8080/service";
+ axios.defaults.baseURL= "http://localhost:3030";
  axios.defaults.headers.post['Content-Type'] =  "application/json";
 
 

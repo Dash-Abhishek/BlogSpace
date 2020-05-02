@@ -21,10 +21,10 @@ const CarouselPannel = ({
 
         <Pannel>
             {
-                blogs.map(b => <Card key={ b.id }>
-                        <h4>{ b.title }</h4>
+                blogs.map((blog, index)=> <Card key={ blog.id = index }>
+                        <h4>{ blog.title }</h4>
                         
-                        <h5>{ b.subTitle }</h5>
+                        <h5>{ blog.subTitle }</h5>
                     </Card>)
             }
         </Pannel>
