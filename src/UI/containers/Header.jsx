@@ -1,9 +1,9 @@
 import { connect } from 'react-redux';
 import Header from '../ui/Header/Header';
-import { getCategories } from '../../redux/actions/home';
+import { getCategories } from '../../redux/actions/header';
 
 const mapStateToProps = (state) => ({
-    categories: state.home.categories
+    categories: state.header.categories
 });
 
 const mapDispatchToProps = ({

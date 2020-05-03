@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import styled from 'styled-components';
-import Bridge from '../CommBridge/Bridge';
 import SubscribeButton from '../Common/SubcribeButton';
 
 
@@ -41,6 +40,7 @@ const Header = ({
     useEffect(() => {
         if(!categories || (categories.length === 0)) {
             getCategories();
+            console.log("got categories",categories.length);
         }
     }, []);
 
