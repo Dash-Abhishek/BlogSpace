@@ -40,7 +40,6 @@ const Header = ({
     useEffect(() => {
         if(!categories || (categories.length === 0)) {
             getCategories();
-            console.log("got categories",categories.length);
         }
     }, []);
 

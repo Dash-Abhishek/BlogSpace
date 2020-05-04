@@ -12,7 +12,11 @@ export default () => {
     middlewares.push(createLogger);
     const initialState = {
         home: {
-            trendingBlogs: []
+            landingPageContent:{
+                promotionalBlog:{},
+                trendingBlogs:[],
+                topViewedBlog:{}
+            }
         },
         header: {
             categories: []

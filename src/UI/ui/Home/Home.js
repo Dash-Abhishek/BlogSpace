@@ -18,30 +18,22 @@ const Canvas = styles.div`
 `;
 
 const Home = ({
-    getTrendingBlogs,
-    trendingBlogs
+    getlandingPageContent,
+    landingPageContent
 }) => {
 
     useEffect(() => {
-        if(!trendingBlogs || (trendingBlogs.length === 0)) {
-            getTrendingBlogs(); 
-        }
+
+        if(landingPageContent.trendingBlogs.length === 0)
+            getlandingPageContent(); 
+        
     }, []);
 
     return (
         <Canvas>
-            <JumbotronPannel>
-                <h1>
-                    Title of a longer featured blog post
-                </h1>
-                <br />
-                <h3>Multiple lines of text that form the lede,
-                informing new readers quickly and efficiently about
-                what's most interesting in this post's contents.
-                    </h3>
-                    
-            </JumbotronPannel>
-            <CarouselPannel blogs={ trendingBlogs } />
+            
+            <JumbotronPannel blog={landingPageContent.promotionalBlog}/>
+            <CarouselPannel blogs={ landingPageContent.trendingBlogs } />
             <TrendPannel/>
         </Canvas>
 

@@ -15,7 +15,7 @@ const Body = styled.section`
     padding-bottom: 1em;
     margin-left: auto;
     margin-right: auto;
-    width: fit-content;
+    width: 100%;
     min-height: calc(100vh - 210px);
     background: linear-gradient(to top, #dfe9f3 50%, white 100%);  
 `;
