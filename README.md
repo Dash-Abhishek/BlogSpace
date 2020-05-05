@@ -1,3 +1,8 @@
 # Blogspace
 
-[<img src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png">](http://google.com.au/)
+ Local dev setup
+
+* Bootup backend server `node server.js`
+
+* Start react app `npm start`
+
