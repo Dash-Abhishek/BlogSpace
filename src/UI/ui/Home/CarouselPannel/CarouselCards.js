@@ -14,4 +14,31 @@ margin:5px;
 min-width:20%;
 `
 
-export default Card;
+
+const CardTitle = styles.h5`
+    margin-top:10px;
+    color: black;
+`
+
+const HighLighter = styles.div`
+    height: 5px;
+    background: #5ad67d;
+    width: 35px;
+    border-radius: 3px;
+`
+
+const CardSubTitle = styles.h6`
+    margin-top:10px;
+    color: gray;
+`
+
+const CardFooter = styles.div`
+    display:flex;
+    justify-content: space-between;
+`
+
+const Metadata = styles.p`
+    color: gray
+` 
+
+export { Card, CardTitle, CardSubTitle, HighLighter, CardFooter, Metadata};

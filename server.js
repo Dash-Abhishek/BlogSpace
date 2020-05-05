@@ -10,8 +10,8 @@ app.get("/landingPage", (req, res) => {
 
     let blog = {
         "id": "",
-        "title": "bla bla",
-        "subTitle": "foo bar foo bar",
+        "title": "Blog Title",
+        "subTitle": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus harum",
         "author": "jhon doe",
         "img": "https://www.vuelio.com/uk/wp-content/uploads/2020/01/Top-10-Vlog-ranking-feature-image.png"
     }
