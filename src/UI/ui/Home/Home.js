@@ -15,6 +15,7 @@ const Canvas = styles.div`
     width:85%;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 40px;
 `;
 
 const Home = ({
@@ -34,7 +35,7 @@ const Home = ({
             
             <JumbotronPannel blog={landingPageContent.promotionalBlog}/>
             <CarouselPannel blogs={ landingPageContent.trendingBlogs } />
-            <TrendPannel/>
+            <TrendPannel blogs={landingPageContent}/>
         </Canvas>
 
     )

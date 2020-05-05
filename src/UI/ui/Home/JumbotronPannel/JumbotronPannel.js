@@ -17,7 +17,6 @@ margin:30px 0px 10px 0px;
 const JumbotronPannel = ({blog}) => {
     return (
         <JPannel>
-            
               <h1>
                 {blog.title}
                 </h1>

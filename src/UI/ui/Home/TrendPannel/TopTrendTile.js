@@ -1,7 +1,7 @@
 import styled from 'styled-components';
+import React  from 'react';
 
-
-const ToptTendTile = styled.div`
+const Tile = styled.div`
 display:flex;
 flex:1;
 background: #343a40;
@@ -13,6 +13,25 @@ box-shadow: 0 10px 6px -6px #777;
 flex-direction: column;
 min-width:60%;
 `
+
+
+const ToptTendTile = ({blog})=>{
+
+
+    return(
+            <Tile>
+
+                <h3>{blog.title}</h3>
+                <h4>{blog.subTitle}</h4>
+                <br/>
+                <h5>{blog.author}</h5>    
+
+            </Tile>
+
+    )
+
+}
+
 
 
 export default ToptTendTile;

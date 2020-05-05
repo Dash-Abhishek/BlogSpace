@@ -23,8 +23,8 @@ const CarouselPannel = ({
         <Pannel>
             {
                 blogs.map((blog, index) => <Card key={blog.id = index}>
+                    <img className = "rounded img-fluid" src={blog.img}></img>
                     <h4>{blog.title}</h4>
-
                     <h5>{blog.subTitle}</h5>
                     <br/>
                     <h6>{blog.author}</h6>

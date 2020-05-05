@@ -7,11 +7,12 @@ const NavBar = styled.div`
     display:flex;
     position: fixed;
     width:100%;
+    padding: 20px 30px 10px 30px;
     color: black;
     font-weight: 200;
     font-size: x-large;
     font-family: sans-serif;
-    // background: yellow;
+    background: white;
     justify-content: space-between;
 `;
 

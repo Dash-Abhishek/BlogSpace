@@ -15,14 +15,14 @@ justify-content: space-between;
 `
 
 
-const TrendPannel = () =>{
+const TrendPannel = ({blogs}) =>{
 
 
     return(
         <Pannel>
 
-            <ToptTendTile></ToptTendTile>
-            <TrendStatsPannel></TrendStatsPannel>
+            <ToptTendTile blog={blogs.topViewedBlog}/>
+            <TrendStatsPannel blog={blogs.topViewedBlog}/>
 
         </Pannel>
     );
