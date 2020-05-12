@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import styled from 'styled-components';
 import SubscribeButton from '../Common/SubcribeButton';
-
+import { Link } from 'react-router-dom';
 
 const NavBar = styled.div`
     display:flex;
@@ -22,16 +22,30 @@ const NavItems = styled.div`
     flex-basis: 50%;
 `;
 
-const Item = styled.div`
+const Item = styled(Link)`
     display:flex;
     text-decoration:none;
-    font-size: x-large;
+    font-size: xx-large;
+    
+    color:black;
+
+    &:hover{
+        text-decoration:none;
+        font-weight: bolder;
+        color:black;
+        }
 `;
 
-const Logo = styled.div`
+const Logo = styled(Link)`
     diplay:flex;
     font-weight:800;
-    font-size: x-large
+    font-size: larger;
+    color:black;
+
+    &:hover{
+        text-decoration:none;
+        color:black;
+        }
 `;
 
 const Header = ({
@@ -39,22 +53,22 @@ const Header = ({
     categories
 }) => {
     useEffect(() => {
-        if(!categories || (categories.length === 0)) {
+        if (!categories || (categories.length === 0)) {
             getCategories();
         }
     }, []);
 
     return (
         <NavBar>
-            <Logo>BlogSpace</Logo>
+            <Logo to="/">BlogSpace</Logo>
             <NavItems>
                 {
                     categories
-                    ? categories.map(c => <Item key={ c } >{ c }</Item>)
-                    : null
+                        ? categories.map(category => <Item to={'/' + category} key={category} >{category}</Item>)
+                        : null
                 }
             </NavItems>
-            <SubscribeButton />            
+            <SubscribeButton />
         </NavBar>
     );
 }

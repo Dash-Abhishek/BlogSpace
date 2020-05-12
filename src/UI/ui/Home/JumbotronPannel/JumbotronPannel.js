@@ -1,8 +1,9 @@
 import styles from 'styled-components'
 import React from 'react';
 import { HighLighter} from '../CarouselPannel/CarouselCards';
+import { Link } from 'react-router-dom';
 
-const JPannel = styles.div`
+const JPannel = styles(Link)`
 display: flex;
 background: #343a90;
 margin-top: 20px;
@@ -10,6 +11,13 @@ color: white;
 border-radius: 5px;
 box-shadow: 0 10px 6px -6px #777;
 margin:30px 0px 10px 0px;
+
+&:hover{
+    text-decoration:none;
+    color:white;
+    box-shadow: 0px 10px 6px -6px #111;
+    }
+
 `
 const BlogTextSection = styles.div`
 

@@ -1,7 +1,7 @@
 import styles from 'styled-components'
+import { Link } from 'react-router-dom';
 
-
-const Card = styles.div`
+const Card = styles(Link)`
 display:flex;
 flex:1;
 flex-direction:column; 
@@ -12,6 +12,11 @@ color: black;
 box-shadow: 0 10px 6px -6px #777;
 margin:5px;
 min-width:20%;
+
+&:hover{
+    text-decoration:none;
+    box-shadow: 0px 10px 6px -6px #111;
+    }
 `
 
 

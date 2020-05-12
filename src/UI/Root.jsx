@@ -22,14 +22,19 @@ const Body = styled.section`
 
 const Root = ({ store }) => {
     return (
-        <Provider store={ store }>
+        <Provider store={store}>
             <Container>
-                <Header />
-                <Body>
-                    <Router>
-                        <Route exact path="/" component={ Home } />
-                    </Router>
-                </Body>
+                <Router>
+                    <Header />
+                    <Body>
+                        <Route exact path="/" component={Home} />
+                        <Route exact path="/moto" component={Home} />
+                        <Route exact path="/lifestyle" component={Home} />
+                        <Route exact path="/tech" component={Home} />
+                        <Route exact path="/legal" component={Home} />
+                        <Route exact path="/social" component={Home} />
+                    </Body>
+                </Router>
                 <Footer />
             </Container>
         </Provider>

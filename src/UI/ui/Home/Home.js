@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-// import { Router, Route } from 'react-router-dom';
 import styles from 'styled-components';
 import JumbotronPannel from './JumbotronPannel/JumbotronPannel'
 import CarouselPannel from './CarouselPannel/CarouselPannel'

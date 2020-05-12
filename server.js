@@ -35,7 +35,7 @@ app.get("/landingPage", (req, res) => {
 app.get("/categories", (req, res) => {
 
     let categories = [];
-    categories.push('Moto', 'Tech', 'Livestyle', 'Social', 'Legal');
+    categories.push('moto', 'tech', 'lifestyle', 'social', 'legal');
 
     console.log(req.hostname);
     res.send(categories);
