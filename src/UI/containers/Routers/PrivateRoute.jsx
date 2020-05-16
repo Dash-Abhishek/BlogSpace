@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { authenticate } from '../../../redux/actions/auth';
-import Loader from '../Popovers/Loader';
+import Loader from '../../ui/Popovers/Loader';
 
 const PrivateRoute = ({
     component: Component,

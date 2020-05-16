@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Provider } from 'react-redux';
 import styled, { ThemeProvider } from 'styled-components';
 
-import PrivateRoute from './containters/Routers/PrivateRoute';
-import CommonRoute from './containters/Routers/CommonRoute';
+import PrivateRoute from './containers/Routers/PrivateRoute';
+import CommonRoute from './containers/Routers/CommonRoute';
 import Header from './containers/Header';
 import Footer from './ui/Footer/Footer';
 import Home from './containers/Home';
