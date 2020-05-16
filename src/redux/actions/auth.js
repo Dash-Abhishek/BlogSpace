@@ -67,7 +67,7 @@ const getToken = () => {
         return bridge.token;
     } else {
         const token = cookies.get('token');
-        bridge.setToken(token);
+        token && bridge.setToken(token);
         return token;
     }
 }
