@@ -1,7 +1,7 @@
 import {
     GET_LANDING_PAGE_BLOGS_SUCCESS
 } from './actiontypes';
-import Bridge from '../../UI/ui/CommBridge/Bridge';
+import bridge from '../../utils/CommBridge/bridge';
 
 
 
@@ -9,7 +9,7 @@ export const getlandingPageContent = () => {
 
     return dispatch => {
 
-        Bridge.get("/landingPage")
+        bridge.instance.get("/landingPage")
             .then((response) => {
                 
                 dispatch({ type: GET_LANDING_PAGE_BLOGS_SUCCESS, payload: response.data });

@@ -15,7 +15,7 @@ min-width:20%;
 `
 
 
-const TrendStatsPannel = ({blog}) =>{
+const TrendStatsPannel = ({blog = {}}) =>{
 
     return (
 

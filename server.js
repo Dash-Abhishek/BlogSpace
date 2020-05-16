@@ -40,7 +40,38 @@ app.get("/categories", (req, res) => {
     console.log(req.hostname);
     res.send(categories);
 
-})
+});
+
+
+app.post('/login', (req, res) => {
+    const userDetails = {
+        firstname: 'Sanketh',
+        lastname: 'Mandapati',
+        email: 'mandapatisanketh@gmail.com',
+        token: 'randon jwt',
+        id: 1
+    };
+    res.send(userDetails);
+});
+
+app.post('/register', (req, res) => {
+    const userDetails = {
+        ...req.body,
+        id: 1
+    };
+    res.send(userDetails);
+});
+
+app.get('/authenticate', (req, res) => {
+    const userDetails = {
+        firstname: 'Sanketh',
+        lastname: 'Mandapati',
+        email: 'mandapatisanketh@gmail.com',
+        token: 'randon jwt',
+        id: 1
+    };
+    res.send(userDetails);
+});
 
 
 

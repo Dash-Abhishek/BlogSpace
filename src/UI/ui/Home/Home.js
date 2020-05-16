@@ -32,7 +32,6 @@ const Home = ({
 
     return (
         <Canvas>
-            
             <JumbotronPannel blog={landingPageContent.promotionalBlog}/>
             <CarouselPannel blogs={ landingPageContent.trendingBlogs } />
             <TrendPannel blogs={landingPageContent}/>

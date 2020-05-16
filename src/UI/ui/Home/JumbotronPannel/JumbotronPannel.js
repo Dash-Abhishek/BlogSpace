@@ -28,7 +28,7 @@ bacbackground-size: cover;
 `
 
 
-const JumbotronPannel = ({blog}) => {
+const JumbotronPannel = ({blog = {}}) => {
     return (
         <JPannel>
               <BlogTextSection>
