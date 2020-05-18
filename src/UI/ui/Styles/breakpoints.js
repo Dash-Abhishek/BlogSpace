@@ -31,8 +31,9 @@ export default Object.entries({
     }
 
     acc[k] = (...content) => {
+        console.log("content: ", content);
         const c = css`
-        @media screen and ${query} { ${content.join('')}; }
+        @media screen and ${query} { ${String.raw(...content)}; }
         `;
         console.log("c: ", c);
         return c;

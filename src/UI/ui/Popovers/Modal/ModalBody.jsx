@@ -17,7 +17,7 @@ const BodyContainer = styled.section`
     height: auto;
     width: 90vw;
     ${({ size, theme: {breakpoints: {md}} }) => md`
-        width: ${modalSizes[size] || modalSizes.small};        
+        width: ${modalSizes[size] || modalSizes.default};
     `};
     padding: 1em 1.25em;
     background-color: #FFF;
