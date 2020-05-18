@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import { Provider } from 'react-redux';
 import styled, { ThemeProvider } from 'styled-components';
 
@@ -11,7 +11,7 @@ import Home from './containers/Home';
 import CreateBlog from './ui/CreateBlog';
 // import Login from './ui/Login';
 // import Register from './ui/Register';
-import breakpoints from './ui/Styles/breakpoints';
+import themes from './ui/Styles/themes';
 
 const Container = styled.div`
     width: 100%;
@@ -30,7 +30,7 @@ const Body = styled.section`
 const Root = ({ store }) => {
     return (
         <Provider store={ store }>
-            <ThemeProvider theme={ {breakpoints} }>
+            <ThemeProvider theme={ themes }>
                 <Container>
                     <Header />
                     <Body>

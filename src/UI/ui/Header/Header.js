@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import styled from 'styled-components';
 import SubscribeButton from '../Common/SubcribeButton';
-import Modal from '../Popovers/Modal';
+import Modal from '../Popovers/Modal/index';
 import Auth from '../Auth';
 
 
