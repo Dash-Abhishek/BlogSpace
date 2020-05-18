@@ -2,6 +2,9 @@ import React, { useEffect } from 'react'
 import styled from 'styled-components';
 import SubscribeButton from '../Common/SubcribeButton';
 import { Link } from 'react-router-dom';
+import Modal from '../Popovers/Modal/index';
+import Auth from '../Auth';
+
 
 const NavBar = styled.div`
     display:flex;
@@ -47,10 +50,19 @@ const Logo = styled(Link)`
         color:black;
         }
 `;
+const LoginButton = styled.button`
+    background-color: gold;
+    padding: 0.25em 1.5em;
+    border: none;
+    outline: none;
+`;
 
 const Header = ({
     getCategories,
-    categories
+    categories,
+    isLoggedIn,
+    showAuthModal,
+    toggleAuthModal
 }) => {
     useEffect(() => {
         if (!categories || (categories.length === 0)) {
@@ -60,7 +72,15 @@ const Header = ({
 
     return (
         <NavBar>
+
             <Logo to="/">BlogSpace</Logo>
+            <Modal onClose={ () => {
+                toggleAuthModal();
+            } } open={ showAuthModal } >
+                <Auth />
+            </Modal>
+            <Logo>BlogSpace</Logo>
+
             <NavItems>
                 {
                     categories
@@ -68,7 +88,16 @@ const Header = ({
                         : null
                 }
             </NavItems>
-            <SubscribeButton />
+
+            {
+                isLoggedIn ? (
+                    <SubscribeButton />
+                ) : (
+                    <LoginButton onClick={ () => toggleAuthModal() }>
+                        Login
+                    </LoginButton>
+                )
+            }
         </NavBar>
     );
 }

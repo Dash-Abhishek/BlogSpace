@@ -3,10 +3,11 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import createLogger from 'redux-logger';
 import home from './reducers/home';
 import header from './reducers/header';
+import auth from './reducers/auth';
 
 export default () => {
     const reducer = combineReducers({
-        home, header
+        home, header, auth
     });
     const middlewares = [thunk];
     middlewares.push(createLogger);
@@ -20,6 +21,14 @@ export default () => {
         },
         header: {
             categories: []
+        },
+        auth: {
+            loading: false,
+            isLoggedIn: false,
+            userData: {},
+            errorMessage: null,
+            registerError: null,
+            authenticationFailed: false
         }
 
     };

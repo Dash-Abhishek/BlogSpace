@@ -1,13 +1,17 @@
 import { connect } from 'react-redux';
 import Header from '../ui/Header/Header';
 import { getCategories } from '../../redux/actions/header';
+import { toggleAuthModal } from '../../redux/actions/auth';
 
-const mapStateToProps = (state) => ({
-    categories: state.header.categories
+const mapStateToProps = ({ header, auth }) => ({
+    categories: header.categories,
+    isLoggedIn: auth.isLoggedIn,
+    showAuthModal: auth.showAuthModal
 });
 
 const mapDispatchToProps = ({
-    getCategories
+    getCategories,
+    toggleAuthModal
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Header);

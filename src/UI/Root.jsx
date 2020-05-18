@@ -1,10 +1,17 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import styled from 'styled-components';
-import Header from './containers/Header';
-import Home from './containers/Home';
-import Footer from './ui/Footer/Footer';
+import { BrowserRouter as Router } from "react-router-dom";
 import { Provider } from 'react-redux';
+import styled, { ThemeProvider } from 'styled-components';
+
+import PrivateRoute from './containers/Routers/PrivateRoute';
+import CommonRoute from './containers/Routers/CommonRoute';
+import Header from './containers/Header';
+import Footer from './ui/Footer/Footer';
+import Home from './containers/Home';
+import CreateBlog from './ui/CreateBlog';
+// import Login from './ui/Login';
+// import Register from './ui/Register';
+import themes from './ui/Styles/themes';
 
 const Container = styled.div`
     width: 100%;
@@ -17,26 +24,32 @@ const Body = styled.section`
     margin-right: auto;
     width: 100%;
     min-height: calc(100vh - 210px);
-    background: linear-gradient(to top, #dfe9f3 50%, white 100%);  
+    background: linear-gradient(to top, #dfe9f3 50%, white 100%);
 `;
 
 const Root = ({ store }) => {
     return (
-        <Provider store={store}>
-            <Container>
-                <Router>
+
+        <Provider store={ store }>
+            <ThemeProvider theme={ themes }>
+                <Container>
                     <Header />
                     <Body>
-                        <Route exact path="/" component={Home} />
-                        <Route exact path="/moto" component={Home} />
+                        <Router>
+                            <CommonRoute exact path="/" component={ Home } />
+                            {/* <Route exact path="/login" component={ Login } />
+                            <Route exact path="/register" component={ Register } /> */}
+                            <PrivateRoute exact path="/createblog" component={ CreateBlog } />
+                          <Route exact path="/moto" component={Home} />
                         <Route exact path="/lifestyle" component={Home} />
                         <Route exact path="/tech" component={Home} />
                         <Route exact path="/legal" component={Home} />
                         <Route exact path="/social" component={Home} />
+                        </Router>
                     </Body>
-                </Router>
-                <Footer />
-            </Container>
+                    <Footer />
+                </Container>
+            </ThemeProvider>
         </Provider>
     );
 }

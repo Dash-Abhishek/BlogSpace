@@ -13,7 +13,7 @@ const SubscribeButtonStyle = styled.button`
     border-radius: 5px;
     font-size: large;
     cursor: pointer;
-    `
+`;
 
 
 const SubscribeButton = () => {
